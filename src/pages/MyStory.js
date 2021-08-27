@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import Image from "../components/Image";
 import Title from "../components/Title";
+import Footer from "../components/Footer";
 
 import trash from "../assets/trash.jpg";
 import bottle from "../assets/bottle.jpg";
@@ -143,6 +144,7 @@ const MyStory = () => {
           함께 해보자, 업사이클링!
         </Title>
       </Wrapper>
+      <Footer />
     </div>
   );
 };

@@ -56,20 +56,47 @@ const About = () => {
       </Title>
       <Row style={{ justifyContent: "space-around" }}>
         <Col>
-          <img alt="끊임없는" src={eternal} />
-          <Title>ETERNAL</Title>
-          <Title>끊임없는</Title>
+          <img alt="끊임없는" src={eternal} style={{ width: "120%" }} />
+          <Title
+            size="30"
+            weight="700"
+            marginBottom="24"
+            style={{ textShadow: "0px 4px 4px grey" }}
+          >
+            ETERNAL
+          </Title>
+          <Title size="28" weight="700">
+            끊임없는
+          </Title>
         </Col>
 
-        <Col>
-          <img alt="다시" src={again} />
-          <Title>AGAIN</Title>
-          <Title>다시</Title>
+        <Col style={{ marginRight: "50px", marginLeft: "50px" }}>
+          <img alt="다시" src={again} style={{ width: "120%" }} />
+          <Title
+            size="30"
+            weight="700"
+            marginBottom="24"
+            style={{ textShadow: "0px 4px 4px grey" }}
+          >
+            AGAIN
+          </Title>
+          <Title size="28" weight="700">
+            다시
+          </Title>
         </Col>
         <Col>
-          <img alt="유용한" src={useful} />
-          <Title>USEFUL</Title>
-          <Title>유용한</Title>
+          <img alt="유용한" src={useful} style={{ width: "120%" }} />
+          <Title
+            size="30"
+            weight="700"
+            marginBottom="24"
+            style={{ textShadow: "0px 4px 4px grey" }}
+          >
+            USEFUL
+          </Title>
+          <Title size="28" weight="700">
+            유용한
+          </Title>
         </Col>
       </Row>
       <Row style={{ marginTop: "450px", marginBottom: "150px" }}>
