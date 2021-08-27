@@ -66,28 +66,9 @@ const Col = styled.div`
 const MainPage = () => {
   const history = useHistory();
 
-  const projects = [
-    {
-      src: "../assets/rectangle.png",
-      name: "프로젝트1",
-    },
-    {
-      src: "../assets/rectangle.png",
-      name: "프로젝트2",
-    },
-    {
-      src: "../assets/rectangle.png",
-      name: "프로젝트3",
-    },
-    {
-      src: "../assets/rectangle.png",
-      name: "프로젝트4",
-    },
-  ];
-
-  // const [projects, setProjects] = useState([
+  // const projects = [
   //   {
-  //     src: "../assets/upcycling.png",
+  //     src: "../assets/rectangle.png",
   //     name: "프로젝트1",
   //   },
   //   {
@@ -102,7 +83,26 @@ const MainPage = () => {
   //     src: "../assets/rectangle.png",
   //     name: "프로젝트4",
   //   },
-  // ]);
+  // ];
+
+  const [projects, setProjects] = useState([
+    {
+      src: { upcycling },
+      name: "프로젝트1",
+    },
+    {
+      src: "../assets/rectangle.png",
+      name: "프로젝트2",
+    },
+    {
+      src: "../assets/rectangle.png",
+      name: "프로젝트3",
+    },
+    {
+      src: "../assets/rectangle.png",
+      name: "프로젝트4",
+    },
+  ]);
 
   return (
     <Wrapper>
@@ -155,7 +155,7 @@ const MainPage = () => {
               return (
                 <ProjectBox key={i}>
                   <Image
-                    alt="프로젝트 이미지"
+                    alt={project.name}
                     src={require("../assets/rectangle.png").default}
                     width="430"
                     height="330"
@@ -166,14 +166,6 @@ const MainPage = () => {
             })}
           </Slider>
         </div>
-
-        {/* <Image
-          alt="프로젝트 이미지"
-          src={require("../assets/rectangle.png").default}
-          width="430"
-          height="330"
-        /> */}
-        {/* <img alt="푸터" src={footer} style={{}} /> */}
         <Footer />
       </Background>
     </Wrapper>
