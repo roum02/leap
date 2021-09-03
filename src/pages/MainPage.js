@@ -1,11 +1,12 @@
-import React, { Component, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router";
 
 import Header from "../components/Header";
-import Image from "../components/Image";
 import Footer from "../components/Footer";
+import Image from "../components/Image";
 import Title from "../components/Title";
+import Carousel from "../components/Carousel";
 
 import main from "../assets/main.jpg";
 import logo from "../assets/logo.png";
@@ -36,12 +37,13 @@ const Slider = styled.div`
   display: flex;
   flex-flow: wrap;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   width: 100%;
   flex-direction: row;
   transition: 0.1s;
   margin: 30px;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
 `;
 
 const ProjectBox = styled.div`
@@ -59,8 +61,8 @@ const Row = styled.div`
 const Col = styled.div`
   display: flex;
   flex-direction: column;
-  width: 25rem;
-  margin-right: 50px;
+  width: 15rem;
+  margin-bottom: 30px;
 `;
 
 const MainPage = () => {
@@ -107,7 +109,8 @@ const MainPage = () => {
   return (
     <Wrapper>
       <Background>
-        <Header />
+        <Header page="0" />
+        {/* <Carousel /> */}
         <div style={{ marginTop: "75rem" }} />
         <div style={{ marginLeft: "8rem", marginBottom: "200px" }}>
           <Title size="36" weight="700">
@@ -149,9 +152,24 @@ const MainPage = () => {
           </Col>
         </Row> */}
 
-        <div style={{ overflowX: "hidden" }}>
+        {/* <div style={{ overflowX: "hidden" }}> */}
+        <div>
           <Slider>
-            {projects.map((project, i) => {
+            <Col>
+              <img src={upcycling} style={{ width: "100%" }} />
+            </Col>
+            <Col style={{ marginRight: "160px", marginLeft: "100px" }}>
+              <img
+                src={upcyclathon}
+                style={{
+                  width: "120%",
+                }}
+              />
+            </Col>
+            <Col>
+              <img src={exhibition} style={{ width: "110%" }} />
+            </Col>
+            {/* {projects.map((project, i) => {
               return (
                 <ProjectBox key={i}>
                   <Image
@@ -163,9 +181,22 @@ const MainPage = () => {
                   />
                 </ProjectBox>
               );
-            })}
+            })} */}
           </Slider>
         </div>
+        {/* 
+        <Row style={{ justifyContent: "space-around" }}>
+          <Col>
+            <img alt="끊임없는" src={upcycling} style={{ width: "120%" }} />
+          </Col>
+
+          <Col style={{ marginRight: "50px", marginLeft: "50px" }}>
+            <img alt="다시" src={upcyclathon} style={{ width: "120%" }} />
+          </Col>
+          <Col>
+            <img alt="유용한" src={exhibition} style={{ width: "120%" }} />
+          </Col>
+        </Row> */}
         <Footer />
       </Background>
     </Wrapper>

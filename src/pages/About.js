@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Image from "../components/Image";
 import Title from "../components/Title";
 import logo from "../assets/logo.png";
+import Footer from "../components/Footer";
 
 import eternal from "../assets/eternal.png";
 import again from "../assets/again.png";
@@ -33,10 +34,15 @@ const Col = styled.div`
   align-items: center;
 `;
 
+const Link = styled.a`
+  color: black;
+  text-decoration: none;
+`;
+
 const About = () => {
   return (
     <Wrapper>
-      <Header />
+      <Header page="2" />
       <Title size="48" weight="700" marginBottom="100" marginTop="200">
         지구와 우리 사이를 UP시키다
       </Title>
@@ -128,19 +134,21 @@ const About = () => {
               <Title marginLeft="30">인스타 주소</Title>
             </Col>
           </Row>
-          <Row
-            style={{
-              width: "15rem",
-              alignItems: "flex-start",
-              justifyContent: "flex-start",
-              marginBottom: "4rem",
-            }}
-          >
-            <img alt="홈" src={home} />
-            <Col style={{ paddingTop: "6px" }}>
-              <Title marginLeft="30">홈페이지 주소</Title>
-            </Col>
-          </Row>
+          <Link href="https://roum02.github.io/reap/#/">
+            <Row
+              style={{
+                width: "15rem",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                marginBottom: "4rem",
+              }}
+            >
+              <img alt="홈" src={home} />
+              <Col style={{ paddingTop: "6px" }}>
+                <Title marginLeft="30">https://roum02.github.io/reap/#/</Title>
+              </Col>
+            </Row>
+          </Link>
           <Row
             style={{
               width: "15rem",
@@ -168,6 +176,7 @@ const About = () => {
           </Row>
         </Col>
       </Row>
+      <Footer />
     </Wrapper>
   );
 };

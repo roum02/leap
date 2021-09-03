@@ -33,7 +33,7 @@ const Row = styled.div`
 const MyStory = () => {
   return (
     <div>
-      <Header />
+      <Header page="1" />
       <div style={{ marginLeft: "90px", marginBottom: "80px" }}>
         <Title size="48" weight="700" marginTop="130">
           업사이클링,
