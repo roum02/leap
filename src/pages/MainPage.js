@@ -61,6 +61,7 @@ const Row = styled.div`
 const Col = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 15rem;
   margin-bottom: 30px;
 `;
@@ -157,17 +158,33 @@ const MainPage = () => {
           <Slider>
             <Col>
               <img src={upcycling} style={{ width: "100%" }} />
+              <Title size="36" weight="700" marginTop="30">
+                UPCYCLING
+              </Title>
+              <Title size="36" weight="700" marginTop="20">
+                CAMPAIGN
+              </Title>
             </Col>
-            <Col style={{ marginRight: "160px", marginLeft: "100px" }}>
+
+            <Col style={{ marginRight: "140px", marginLeft: "100px" }}>
               <img
                 src={upcyclathon}
                 style={{
                   width: "120%",
                 }}
               />
+              <Title size="36" weight="700" marginTop="30">
+                UPCYCLATHON
+              </Title>
             </Col>
             <Col>
               <img src={exhibition} style={{ width: "110%" }} />
+              <Title size="36" weight="700" marginTop="30">
+                UPCYCLING
+              </Title>
+              <Title size="36" weight="700" marginTop="20">
+                EXHIBITION
+              </Title>
             </Col>
             {/* {projects.map((project, i) => {
               return (

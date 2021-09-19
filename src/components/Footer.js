@@ -49,7 +49,7 @@ const Footer = () => {
         <Row>
           <img src={insta} />
           <Title size="15" weight="700" marginLeft="10">
-            인스타 주소
+            @earth__.us
           </Title>
         </Row>
         <Link href="https://roum02.github.io/reap/#/">

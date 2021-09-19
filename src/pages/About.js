@@ -131,7 +131,7 @@ const About = () => {
           >
             <img alt="인스타" src={insta} />
             <Col style={{ paddingTop: "6px" }}>
-              <Title marginLeft="30">인스타 주소</Title>
+              <Title marginLeft="30">@earth__.us</Title>
             </Col>
           </Row>
           <Link href="https://roum02.github.io/reap/#/">
