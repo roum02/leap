@@ -3,6 +3,7 @@ import React, { Component, useState } from "react";
 import styled from "styled-components";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Image from "../components/Image";
 import Title from "../components/Title";
 import Input from "../components/Input";
@@ -36,6 +37,7 @@ const Slider = styled.div`
 const ProjectBox = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-right: 40px;
   margin-bottom: 40px;
 `;
@@ -86,46 +88,46 @@ const Item = styled.div`
 
 const With = () => {
   const [order, setOrder] = useState({
-    time: "시간순",
+    time: "최신순",
   });
   const [projects, setProjects] = useState([
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트1",
+      name: "프로젝트 제목1",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트2",
+      name: "프로젝트 제목2",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트3",
+      name: "프로젝트 제목3",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트4",
+      name: "프로젝트 제목4",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트5",
+      name: "프로젝트 제목5",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트6",
+      name: "프로젝트 제목6",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트7",
+      name: "프로젝트 제목7",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트8",
+      name: "프로젝트 제목8",
     },
   ]);
 
   return (
     <Wrapper>
-      <Header />
+      <Header page="4" />
       {/*dropdown */}
       <Row
         style={{
@@ -189,11 +191,13 @@ const With = () => {
                   width="350"
                   height="350"
                 />
+                <Title size="20">{project.name}</Title>
               </ProjectBox>
             );
           })}
         </Slider>
       </div>
+      <Footer />
     </Wrapper>
   );
 };

@@ -10,6 +10,14 @@ const Wrapper = styled.div`
   justify-content: flex-end;
   width: 100%;
 
+  //fix
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* background-color: white; */
+  /* padding-bottom: 2rem; */
+
   .menu {
     display: flex;
     flex-direction: row;
@@ -32,22 +40,36 @@ const Menu = styled.div`
   }
 `;
 
-// const Active = styled.div`
-//   width: 173px;
-//   height: 95px;
-//   text-align: center;
-//   padding: 30px;
-//   font-size: 24px;
-//   border-bottom: 5px solid;
-//   border-color: var(--middle);
-//   color: var(--deep);
-// `;
+const Active = styled.div`
+  text-align: center;
+  padding: 10px;
+  margin-top: 60px;
+  margin-right: 80px;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 5px solid;
+  border-color: var(--middle);
+  color: var(--deep);
+  cursor: pointer;
+`;
 
 function Header({ page }) {
   const history = useHistory();
   //화면이동
   const Main = () => {
     history.push("/");
+  };
+  const MyStory = () => {
+    history.push("/mystory");
+  };
+  const About = () => {
+    history.push("/about");
+  };
+  const Work = () => {
+    history.push("/work");
+  };
+  const With = () => {
+    history.push("/with");
   };
 
   return (
@@ -63,12 +85,92 @@ function Header({ page }) {
           top: "0px",
           left: "8px",
         }}
-        onClick={() => history.push("/")}
+        onClick={Main}
       />
-      <Menu onClick={() => history.push("/mystory")}>MYSTORY</Menu>
-      <Menu onClick={() => history.push("/about")}>ABOUT</Menu>
-      <Menu onClick={() => history.push("/work")}>WORK</Menu>
-      <Menu onClick={() => history.push("/with")}>WITH</Menu>
+
+      {page === "0" ? (
+        <div class="menu">
+          <Menu onClick={MyStory}>
+            ABOUT
+            <br />
+            US
+          </Menu>
+          <Menu onClick={About}>
+            ABOUT
+            <br />
+            EARTH
+          </Menu>
+          <Menu onClick={Work}>WORK</Menu>
+          <Menu onClick={With}>WITH</Menu>
+        </div>
+      ) : null}
+
+      {page === "1" ? (
+        <div class="menu">
+          <Active>
+            ABOUT
+            <br /> US
+          </Active>
+          <Menu onClick={About}>
+            ABOUT
+            <br />
+            EARTH
+          </Menu>
+          <Menu onClick={Work}>WORK</Menu>
+          <Menu onClick={With}>WITH</Menu>
+        </div>
+      ) : null}
+
+      {page === "2" ? (
+        <div class="menu">
+          <Menu onClick={MyStory}>
+            ABOUT
+            <br />
+            US
+          </Menu>
+          <Active>
+            ABOUT
+            <br />
+            EARTH
+          </Active>
+          <Menu onClick={Work}>WORK</Menu>
+          <Menu onClick={With}>WITH</Menu>
+        </div>
+      ) : null}
+
+      {page === "3" ? (
+        <div class="menu">
+          <Menu onClick={MyStory}>
+            ABOUT
+            <br />
+            US
+          </Menu>
+          <Menu onClick={About}>
+            ABOUT
+            <br />
+            EARTH
+          </Menu>
+          <Active>WORK</Active>
+          <Menu onClick={With}>WITH</Menu>
+        </div>
+      ) : null}
+
+      {page === "4" ? (
+        <div class="menu">
+          <Menu onClick={MyStory}>
+            ABOUT
+            <br />
+            US
+          </Menu>
+          <Menu onClick={About}>
+            ABOUT
+            <br />
+            EARTH
+          </Menu>
+          <Menu onClick={Work}>WORK</Menu>
+          <Active>WITH</Active>
+        </div>
+      ) : null}
     </Wrapper>
   );
 }

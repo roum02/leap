@@ -6,6 +6,9 @@ import Header from "../components/Header";
 import Image from "../components/Image";
 import Title from "../components/Title";
 import Input from "../components/Input";
+import Footer from "../components/Footer";
+
+import Modal from "../components/Modal";
 
 const Wrapper = styled.div`
   display: flex;
@@ -36,6 +39,7 @@ const Slider = styled.div`
 const ProjectBox = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-right: 40px;
   margin-bottom: 40px;
 `;
@@ -86,7 +90,7 @@ const Item = styled.div`
 
 const Work = () => {
   const [order, setOrder] = useState({
-    time: "시간순",
+    time: "최신순",
   });
   const [projects, setProjects] = useState([
     {
@@ -95,37 +99,46 @@ const Work = () => {
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트2",
+      name: "프로젝트 제목2",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트3",
+      name: "프로젝트 제목3",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트4",
+      name: "프로젝트 제목4",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트5",
+      name: "프로젝트 제목5",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트6",
+      name: "프로젝트 제목6",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트7",
+      name: "프로젝트 제목7",
     },
     {
       src: "../assets/rectangle.png",
-      name: "프로젝트8",
+      name: "프로젝트 제목8",
     },
   ]);
 
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <Wrapper>
-      <Header />
+      <Header page="3" />
       {/*dropdown */}
       <Row
         style={{
@@ -182,18 +195,36 @@ const Work = () => {
         <Slider>
           {projects.map((project, i) => {
             return (
-              <ProjectBox key={i}>
+              <ProjectBox key={i} onClick={openModal}>
                 <Image
                   alt="프로젝트 이미지"
                   src={require("../assets/rectangle.png").default}
                   width="350"
                   height="350"
                 />
+                <Title size="20">{project.name}</Title>
               </ProjectBox>
             );
           })}
+
+          <Modal open={modalOpen} close={closeModal} header="Modal heading">
+            <Image
+              alt="프로젝트 이미지"
+              src={require("../assets/rectangle.png").default}
+              width="350"
+              height="350"
+            />
+            <Title size="20">{projects[1].name}</Title>
+            <br />
+            <Title size="16" weight="400">
+              프로젝트 세부내용 프로젝트 세부내용프로젝트 세부내용프로젝트
+              세부내용프로젝트 세부내용 프로젝트 세부내용프로젝트
+              세부내용프로젝트 세부내용프로젝트 세부내용
+            </Title>
+          </Modal>
         </Slider>
       </div>
+      <Footer />
     </Wrapper>
   );
 };
