@@ -1,8 +1,7 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Header from "../components/Header";
-import Image from "../components/Image";
 import Title from "../components/Title";
 import Footer from "../components/Footer";
 
@@ -17,11 +16,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-const Col = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 const Row = styled.div`

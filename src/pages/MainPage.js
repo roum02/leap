@@ -1,17 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Image from "../components/Image";
 import Title from "../components/Title";
-import Carousel from "../components/Carousel";
 
 import main from "../assets/main.jpg";
-import logo from "../assets/logo.png";
-import footer from "../assets/footer.png";
-import rectangle from "../assets/rectangle.png";
 import upcycling from "../assets/upcycling.png";
 import upcyclathon from "../assets/upcyclathon.png";
 import exhibition from "../assets/exhibition.png";
@@ -46,18 +41,6 @@ const Slider = styled.div`
   margin-bottom: 100px;
 `;
 
-const ProjectBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-right: 40px;
-`;
-
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`;
-
 const Col = styled.div`
   display: flex;
   flex-direction: column;
@@ -66,8 +49,6 @@ const Col = styled.div`
 `;
 
 const MainPage = () => {
-  const history = useHistory();
-
   // const projects = [
   //   {
   //     src: "../assets/rectangle.png",
@@ -87,24 +68,24 @@ const MainPage = () => {
   //   },
   // ];
 
-  const [projects, setProjects] = useState([
-    {
-      src: { upcycling },
-      name: "프로젝트1",
-    },
-    {
-      src: "../assets/rectangle.png",
-      name: "프로젝트2",
-    },
-    {
-      src: "../assets/rectangle.png",
-      name: "프로젝트3",
-    },
-    {
-      src: "../assets/rectangle.png",
-      name: "프로젝트4",
-    },
-  ]);
+  // const [projects, setProjects] = useState([
+  //   {
+  //     src: { upcycling },
+  //     name: "프로젝트1",
+  //   },
+  //   {
+  //     src: "../assets/rectangle.png",
+  //     name: "프로젝트2",
+  //   },
+  //   {
+  //     src: "../assets/rectangle.png",
+  //     name: "프로젝트3",
+  //   },
+  //   {
+  //     src: "../assets/rectangle.png",
+  //     name: "프로젝트4",
+  //   },
+  // ]);
 
   return (
     <Wrapper>
@@ -156,7 +137,7 @@ const MainPage = () => {
         <div>
           <Slider>
             <Col>
-              <img src={upcycling} style={{ width: "100%" }} />
+              <img src={upcycling} alt="upcycling" style={{ width: "100%" }} />
             </Col>
             <Col style={{ marginRight: "160px", marginLeft: "100px" }}>
               <img
@@ -164,10 +145,15 @@ const MainPage = () => {
                 style={{
                   width: "120%",
                 }}
+                alt="upcyclathon"
               />
             </Col>
             <Col>
-              <img src={exhibition} style={{ width: "110%" }} />
+              <img
+                src={exhibition}
+                alt="exhibition"
+                style={{ width: "110%" }}
+              />
             </Col>
             {/* {projects.map((project, i) => {
               return (

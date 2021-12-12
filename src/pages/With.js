@@ -1,5 +1,4 @@
-import { render } from "@testing-library/react";
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import Header from "../components/Header";
@@ -87,10 +86,10 @@ const Item = styled.div`
 `;
 
 const With = () => {
-  const [order, setOrder] = useState({
+  const [order] = useState({
     time: "최신순",
   });
-  const [projects, setProjects] = useState([
+  const [projects] = useState([
     {
       src: "../assets/rectangle.png",
       name: "프로젝트 제목1",

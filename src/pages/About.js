@@ -1,8 +1,7 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Header from "../components/Header";
-import Image from "../components/Image";
 import Title from "../components/Title";
 import logo from "../assets/logo.png";
 import Footer from "../components/Footer";

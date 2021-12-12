@@ -1,9 +1,7 @@
 import React from "react";
-import { useHistory } from "react-router";
 import styled from "styled-components";
 
 import Title from "../components/Title";
-import Image from "../components/Image";
 
 import footer from "../assets/footer.png";
 import insta from "../assets/insta.png";
@@ -25,13 +23,6 @@ const Row = styled.div`
   padding-right: 3rem;
 `;
 
-const Col = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 25rem;
-  margin-right: 5rem;
-`;
-
 const Link = styled.a`
   color: black;
   text-decoration: none;
@@ -47,14 +38,14 @@ const Footer = () => {
           </Title>
         </Row>
         <Row>
-          <img src={insta} />
+          <img src={insta} alt="insta" />
           <Title size="15" weight="700" marginLeft="10">
             인스타 주소
           </Title>
         </Row>
         <Link href="https://roum02.github.io/reap/#/">
           <Row>
-            <img src={home} style={{ width: "3rem" }} />
+            <img src={home} style={{ width: "3rem" }} alt="home" />
             <Title size="15" weight="700" marginLeft="10">
               https://roum02.github.io/reap/#/
             </Title>

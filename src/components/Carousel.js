@@ -6,11 +6,6 @@ import main from "../assets/main.jpg";
 import temp1 from "../assets/temp1.png";
 import temp2 from "../assets/temp2.png";
 
-const IMG = styled.img`
-  width: 100%;
-  height: 70vh;
-`;
-
 const Container = styled.div`
   width: 60%;
   overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.

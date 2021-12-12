@@ -100,8 +100,8 @@ function Header({ page }) {
             <br />
             EARTH
           </Menu>
-          <Menu onClick={Work}>WORK</Menu>
-          <Menu onClick={With}>WITH</Menu>
+          {/* <Menu onClick={Work}>WORK</Menu>
+          <Menu onClick={With}>WITH</Menu> */}
         </div>
       ) : null}
 
@@ -116,8 +116,8 @@ function Header({ page }) {
             <br />
             EARTH
           </Menu>
-          <Menu onClick={Work}>WORK</Menu>
-          <Menu onClick={With}>WITH</Menu>
+          {/* <Menu onClick={Work}>WORK</Menu>
+          <Menu onClick={With}>WITH</Menu> */}
         </div>
       ) : null}
 
@@ -133,8 +133,8 @@ function Header({ page }) {
             <br />
             EARTH
           </Active>
-          <Menu onClick={Work}>WORK</Menu>
-          <Menu onClick={With}>WITH</Menu>
+          {/* <Menu onClick={Work}>WORK</Menu>
+          <Menu onClick={With}>WITH</Menu> */}
         </div>
       ) : null}
 
@@ -150,8 +150,8 @@ function Header({ page }) {
             <br />
             EARTH
           </Menu>
-          <Active>WORK</Active>
-          <Menu onClick={With}>WITH</Menu>
+          {/* <Active>WORK</Active> */}
+          {/* <Menu onClick={With}>WITH</Menu> */}
         </div>
       ) : null}
 
@@ -167,8 +167,8 @@ function Header({ page }) {
             <br />
             EARTH
           </Menu>
-          <Menu onClick={Work}>WORK</Menu>
-          <Active>WITH</Active>
+          {/* <Menu onClick={Work}>WORK</Menu>
+          <Active>WITH</Active> */}
         </div>
       ) : null}
     </Wrapper>
