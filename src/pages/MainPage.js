@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";

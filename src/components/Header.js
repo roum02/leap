@@ -65,12 +65,12 @@ function Header({ page }) {
   const About = () => {
     history.push("/about");
   };
-  const Work = () => {
-    history.push("/work");
-  };
-  const With = () => {
-    history.push("/with");
-  };
+  // const Work = () => {
+  //   history.push("/work");
+  // };
+  // const With = () => {
+  //   history.push("/with");
+  // };
 
   return (
     <Wrapper>
